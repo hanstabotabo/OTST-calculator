@@ -49,7 +49,9 @@ def est_salary_tax(credits, days, salary):
     elif credits >90000:
         salary = credits / 194 * 100
 
-    salary = (salary + base_salary) - 1396.35
+    salary = salary + base_salary
+
+    salary = salary - (salary * 0.2) - 1396.35
 
     salary = round(salary, 2)
 
