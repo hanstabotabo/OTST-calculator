@@ -1,2 +1,2 @@
 # calculator
-basic calculator
+OTST calculator
