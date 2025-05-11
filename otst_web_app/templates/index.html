@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>OTST Salary Calculator</title>
+</head>
+<body>
+    <h1>OTST Salary Calculator</h1>
+    <form method="POST">
+        <label for="credits">Credits:</label>
+        <input type="text" id="credits" name="credits" required><br>
+
+        <label for="days">Days Worked:</label>
+        <input type="text" id="days" name="days" required><br>
+
+        <label for="tax_input">Tax (yes/no):</label>
+        <input type="text" id="tax_input" name="tax_input" required><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if estimated_credits is not none %}
+        <h2>Estimated Credits: {{ estimated_credits }}</h2>
+    {% endif %}
+
+    {% if estimated_salary is not none %}
+        <h2>Estimated Salary: {{ estimated_salary }}</h2>
+    {% endif %}
+
+
+<!--
+    <h1>Add Two Numbers</h1>
+    <form method="POST">
+        <input name="a" placeholder="Enter first number">
+        <input name="b" placeholder="Enter second number">
+        <button type="submit">Add</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+-->
+</body>
+</html>
